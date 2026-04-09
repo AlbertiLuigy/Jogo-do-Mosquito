@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mata Mosca - Iniciar</title>
+		<!-- Importação do Bootstrap para agilizar o layout -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!-- Importação dos nossos estilos personalizados -->
+		<link rel="stylesheet" href="estilo.css" />
+
+		<script>
+			// Função que captura o nível selecionado e inicia o jogo
+			function iniciarJogo() {
+				var nivel = document.getElementById('nivel').value
+
+				// Verifica se algum nível foi selecionado antes de prosseguir
+				if(nivel === '') {
+					alert('Selecione um nível para iniciar o jogo')
+					return false
+				}
+
+				// Redireciona para a página do jogo passando o nível como parâmetro na URL
+				window.location.href = "app.html?" + nivel
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Linha para a imagem de título do jogo -->
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<img src="imagens/game.png" />
+					</div>
+				</div>
+			</div>
+
+			<!-- Linha para a seleção do nível e botão de iniciar -->
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<div class="mb-2">
+							<select class="form-control" id="nivel">
+								<option value="">-- Selecione o nível --</option>
+								<option value="normal">Normal</option>
+								<option value="dificil">Difícil</option>
+								<option value="chucknorris">Chuck Norris</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="d-flex justify-content-center">
+						<!-- Ao clicar, chama a função iniciarJogo() -->
+						<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

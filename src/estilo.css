@@ -1,0 +1,80 @@
+/* Define o cursor personalizado de mata-mosca para toda a página */
+html {
+	cursor: url(imagens/mata_mosca.png) 30 30, auto;
+}
+
+/* Configuração do plano de fundo do jogo */
+body {
+	background-image: url(imagens/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Classes de tamanho para o mosquito */
+.mosquito1 {
+	width: 50px;
+	height: 50px;
+}
+
+.mosquito2 {
+	width: 70px;
+	height: 70px;
+}
+
+.mosquito3 {
+	width: 90px;
+	height: 90px;
+}
+
+/* Classes para inverter o mosquito horizontalmente */
+.ladoA {
+	transform: scaleX(1); /* Olhando para a direita */
+}
+
+.ladoB {
+	transform: scaleX(-1); /* Olhando para a esquerda (espelhado) */
+}
+
+/* Painel fixo no rodapé para exibir informações do jogo */
+.painel {
+	position: fixed;
+	bottom: 0px;
+	width: 190px;
+	padding: 10px;
+	background-color: #fff;
+	opacity: 0.7;
+	border-top: solid 1px #fff;
+}
+
+/* Área que contém os corações */
+.vidas {
+	float: left;
+}
+
+/* Área do cronômetro */
+.cronometro {
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+/* Centralização de imagens de fim de jogo */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	margin-top: 50px;
+}
+
+button {
+	margin-top: 20px;
+}
+
+/* Estilos específicos para a página index.html */
+#nivel {
+	width: 250px;
+	margin-top: 20px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mata Mosca</title>
+
+		<!-- Importação dos estilos CSS -->
+		<link rel="stylesheet" href="estilo.css" />
+		<!-- Importação da lógica JavaScript -->
+		<script src="jogo.js"></script>
+	</head>
+	<!-- O evento onresize chama a função para ajustar o palco caso a janela mude de tamanho -->
+	<body onresize="ajustaTamanhoPalcoJogo()">
+
+		<!-- Painel inferior contendo as vidas e o cronômetro -->
+		<div class="painel">
+			<div class="vidas">
+				<!-- Imagens dos corações que representam a vida do jogador -->
+				<img id="v1" src="imagens/coracao_cheio.png" />
+				<img id="v2" src="imagens/coracao_cheio.png" />
+				<img id="v3" src="imagens/coracao_cheio.png" />
+			</div>
+
+			<!-- Exibição do tempo restante -->
+			<div class="cronometro">Tempo restante: <span id="cronometro">10</span></div>
+		</div>
+
+		<script>
+			// Define o tempo inicial no elemento HTML do cronômetro
+			var cronoElem = document.getElementById('cronometro')
+			if (cronoElem) {
+				cronoElem.innerHTML = tempo
+			}
+		</script>
+	</body>
+</html>
